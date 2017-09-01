@@ -5,11 +5,9 @@ Originally designed for CS students without Linux boxes who need a basic Linux e
 
 ## Create the interactive container
 ``` shell
-# -i for interactive
-# -t allocate pseudo-tty
-# -d Run container in background and print container ID
-# -v mount directory to container (<source>:<destination>)
+# init docker container
 docker run -it -d -v /path/to/host/projectfiles:/path/in/container --name cppenv kelvinrr/cpp-env
+# connect to bash shell in container
 docker attach cppenv
 root@d35c2c52a3a1:/$ which g++
 /usr/bin/g++
@@ -17,9 +15,10 @@ root@d35c2c52a3a1:/$ ^P^Q # exit shell
 root@d35c2c52a3a1:/$ read escape sequence
 ```
 
-## To reconnect after docker run
+## Reconnect after docker run
 ``` shell
-docker start cppenv # start container if stopped
-docker attach cppenv # connect to bash shell in container
+# start container if stopped
+docker start cppenv
+docker attach cppenv
 root@c23b8b42eac1:/$
 ```
