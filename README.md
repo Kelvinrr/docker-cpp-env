@@ -1,6 +1,7 @@
 # docker-cpp-env
-A docker image for a simple C++ environment for building and running linux programs
+A docker image for a simple C++ environment for building and running linux programs.
 
+Originally designed for CS students without Linux boxes who need a basic Linux environment for schoolwork. This allows someone to mount their source code from the host machine to a Linux mini VM. So a developer writes code in their favorite editor and use a Docker Linux terminal to build and run apps. A lightweight alternative to  a full VM.
 
 #### Create container as interactive container
 ``` shell
