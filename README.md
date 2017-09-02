@@ -15,7 +15,7 @@ docker attach cppenv
 Use `^P^Q` to exit without stopping the container, otherwise `^D`
 
 ## Reconnect after docker run
-``` shell
+``` bash
 # start container if stopped
 docker start cppenv
 docker attach cppenv
@@ -25,9 +25,9 @@ root@c23b8b42eac1:/$
 ## Accessing services running inside the container
 
 If you need to run a service (i.e. some kind of server), ports `7000-8000` are
-exposed by default. Additional ports can be exposed with the standard [-p flag](https://docs.docker.com/engine/userguide/networking/default_network/binding/).
+exposed by default. Additional ports can be exposed with the standard [-p flag on `docker run`](https://docs.docker.com/engine/userguide/networking/default_network/binding/).
 
 ``` bash
 # expose an additional port for PostgreSQL
-docker run -it -d -p 5432:5432 kelvinrr/cpp-env`
+docker run -it -d -p 5432:5432 kelvinrr/cpp-env
 ```
