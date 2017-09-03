@@ -19,9 +19,6 @@ RUN apt-get install -y git
 RUN apt-get install -y vim
 RUN apt-get install -y emacs
 
-# for docs
-RUN apt-get update && apt-get install -y firefox
-
 # expose a range of ports
 EXPOSE 7000-8000
 
